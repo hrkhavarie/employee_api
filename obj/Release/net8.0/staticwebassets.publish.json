@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "WB2wh/QroP4+Tfp9kQ7lth8AuZ2g9qLPKp8sy56+mXo=",
+  "Source": "DemoWebAPI",
+  "BasePath": "_content/DemoWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
