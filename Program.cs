@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
-    
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
@@ -18,9 +17,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("PublicPolicy", builder =>
     {
-        builder.AllowAnyOrigin() 
-               .AllowAnyMethod()
-               .AllowAnyHeader();
+        builder
+            .AllowAnyOrigin()  // Allow any origin in development
+            .AllowAnyMethod()
+            .AllowAnyHeader();
     });
 });
 
@@ -36,17 +36,19 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DemoWebAPI_UNDP V1.0");
+        c.RoutePrefix = string.Empty;
+    });
 }
 
-app.UseSwagger();
-app.UseSwaggerUI(c =>
-{
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "DemoWebAPI_UNDP V1.0");
-    c.RoutePrefix = string.Empty;
-});
-
+// Use CORS before other middleware
 app.UseCors("PublicPolicy");
-app.UseHttpsRedirection();
+
+// Comment out HTTPS redirection for local development
+// app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
