@@ -1,1 +1,31 @@
 .vs/
+
+# Angular frontend
+employee/
+**/employee/node_modules/
+**/employee/dist/
+**/employee/.angular/
+**/employee/.vscode/
+**/employee/npm-debug.log
+**/employee/.env
+**/employee/*.log
+**/employee/.DS_Store
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# .NET
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
