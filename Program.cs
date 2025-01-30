@@ -47,11 +47,15 @@ if (app.Environment.IsDevelopment())
 // Use CORS before other middleware
 app.UseCors("PublicPolicy");
 
-// Comment out HTTPS redirection for local development
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
+app.UseStaticFiles(); // Enable serving static files
 
+app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Add fallback route for Angular app
+app.MapFallbackToFile("index.html");
 
 app.Run();
