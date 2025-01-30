@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PGL-PC\\Desktop\\DemoWebAPI_UNDP\\DemoWebAPI_UNDP\\DemoWebAPI.csproj": {}
+    "C:\\Users\\hrkha\\source\\repos\\hrkhavarie\\employee_api\\DemoWebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PGL-PC\\Desktop\\DemoWebAPI_UNDP\\DemoWebAPI_UNDP\\DemoWebAPI.csproj": {
+    "C:\\Users\\hrkha\\source\\repos\\hrkhavarie\\employee_api\\DemoWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PGL-PC\\Desktop\\DemoWebAPI_UNDP\\DemoWebAPI_UNDP\\DemoWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\hrkha\\source\\repos\\hrkhavarie\\employee_api\\DemoWebAPI.csproj",
         "projectName": "DemoWebAPI",
-        "projectPath": "C:\\Users\\PGL-PC\\Desktop\\DemoWebAPI_UNDP\\DemoWebAPI_UNDP\\DemoWebAPI.csproj",
-        "packagesPath": "C:\\Users\\PGL-PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PGL-PC\\Desktop\\DemoWebAPI_UNDP\\DemoWebAPI_UNDP\\obj\\",
+        "projectPath": "C:\\Users\\hrkha\\source\\repos\\hrkhavarie\\employee_api\\DemoWebAPI.csproj",
+        "packagesPath": "C:\\Users\\hrkha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hrkha\\source\\repos\\hrkhavarie\\employee_api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PGL-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hrkha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,7 +43,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -90,24 +91,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.10, 8.0.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.10, 8.0.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.10, 8.0.10]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.10, 8.0.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -116,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-rc.2.24474.11/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
