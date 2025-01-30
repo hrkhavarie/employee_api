@@ -430,3 +430,4 @@ C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Debug\net8.0\employee\sr
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Debug\net8.0\employee\tsconfig.app.json
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Debug\net8.0\employee\tsconfig.json
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Debug\net8.0\employee\tsconfig.spec.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Debug\net8.0\vercel.json

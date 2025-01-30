@@ -278,3 +278,11 @@ C:\Users\hrkha\source\repos\hrkhavarie\employee_api\obj\Release\net8.0\refint\De
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\obj\Release\net8.0\DemoWebAPI.pdb
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\obj\Release\net8.0\DemoWebAPI.genruntimeconfig.cache
 C:\Users\hrkha\source\repos\hrkhavarie\employee_api\obj\Release\net8.0\ref\DemoWebAPI.dll
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\angular.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\package-lock.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\package.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\src\proxy.conf.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\tsconfig.app.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\tsconfig.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\employee\tsconfig.spec.json
+C:\Users\hrkha\source\repos\hrkhavarie\employee_api\bin\Release\net8.0\vercel.json
