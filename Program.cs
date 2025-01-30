@@ -36,14 +36,14 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
-    app.UseSwagger();
-    app.UseSwaggerUI();
-    //    ( c =>
-    //{
-    //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "DemoWebAPI_UNDP V1.0");
-    //    c.RoutePrefix = string.Empty;
-    //});
 }
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "DemoWebAPI_UNDP V1.0");
+    c.RoutePrefix = string.Empty;
+});
 
 app.UseCors("PublicPolicy");
 app.UseHttpsRedirection();
