@@ -3,6 +3,7 @@ using DemoWebAPI.Model;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace DemoWebAPI.Controllers
 {
@@ -11,10 +12,12 @@ namespace DemoWebAPI.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
+        private readonly ILogger<EmployeeController> _logger;
 
-        public EmployeeController(IEmployeeService employeeService)
+        public EmployeeController(IEmployeeService employeeService, ILogger<EmployeeController> logger)
         {
             _employeeService = employeeService;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -37,13 +40,29 @@ namespace DemoWebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddEmployee([FromBody] TblEmployee employee)
         {
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(ModelState);
-            }
-            var newEmployee = await _employeeService.AddEmployee(employee);
-            return CreatedAtAction(nameof(GetEmployee), new { id = newEmployee.EmpId }, newEmployee);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(new { errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage)) });
+                }
 
+                _logger.LogInformation("Attempting to add employee: {@Employee}", employee);
+                var newEmployee = await _employeeService.AddEmployee(employee);
+                _logger.LogInformation("Successfully added employee with ID: {EmpId}", newEmployee.EmpId);
+
+                return CreatedAtAction(nameof(GetEmployee), new { id = newEmployee.EmpId }, newEmployee);
+            }
+            catch (ArgumentException ex)
+            {
+                _logger.LogWarning(ex, "Validation error while adding employee");
+                return BadRequest(new { error = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while adding employee");
+                return StatusCode(500, new { error = "An error occurred while processing your request. Please try again later." });
+            }
         }
 
         [HttpPut("{id}")]

@@ -32,6 +32,9 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+// Enable detailed error messages in production temporarily for debugging
+app.UseDeveloperExceptionPage();
+
 // Configure the HTTP request pipeline.
 app.UseSwagger();
 app.UseSwaggerUI(c =>
